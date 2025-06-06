@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carne na Lata - 3,6kg | Venda do Zé</title>
+    <meta name="description" content="Carne na lata tradicional mineira, produzida artesanalmente com sabor autêntico. Balde de 3,6kg com frete grátis para todo Brasil.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Venda do Zé - Empório Mineiro">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produto.html">Produto</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="receitas.html">Receitas</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+                <div class="cart-dropdown">
+                    <div class="cart-items">
+                        <!-- Itens do carrinho serão inseridos aqui via JavaScript -->
+                        <p class="empty-cart">Seu carrinho está vazio</p>
+                    </div>
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span>R$ 0,00</span>
+                    </div>
+                    <div class="cart-buttons">
+                        <a href="#" class="btn btn-outline">Ver Carrinho</a>
+                        <a href="#" class="btn">Finalizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Produto Page -->
+    <section class="produto-page">
+        <div class="container">
+            <div class="produto-page-content">
+                <div class="produto-gallery">
+                    <img src="images/carne_lata_2.jpg" alt="Carne na Lata - 3,6kg" class="produto-main-image" id="main-image">
+                    <div class="produto-thumbnails">
+                        <img src="images/carne_lata_2.jpg" alt="Carne na Lata - Imagem 1" class="produto-thumbnail" onclick="changeImage(this.src)">
+                        <img src="images/carne_lata_1.png" alt="Carne na Lata - Imagem 2" class="produto-thumbnail" onclick="changeImage(this.src)">
+                        <img src="images/carne_lata_3.jpg" alt="Carne na Lata - Imagem 3" class="produto-thumbnail" onclick="changeImage(this.src)">
+                        <img src="images/carne_lata_4.jpg" alt="Carne na Lata - Imagem 4" class="produto-thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                </div>
+                <div class="produto-info">
+                    <h1>Carne na Lata - 3,6kg</h1>
+                    <div class="produto-price-info">
+                        <div class="produto-price">
+                            R$ 299,90 <span class="original-price">R$ 349,90</span>
+                        </div>
+                        <p>Economize R$ 50,00 (14% de desconto)</p>
+                    </div>
+                    <p>Nossa carne na lata é produzida com cortes selecionados de carne suína, conservada na própria gordura, seguindo a tradição mineira. Um produto versátil, prático e delicioso.</p>
+                    <ul class="produto-features">
+                        <li>Sabor autêntico da culinária mineira</li>
+                        <li>Sem conservantes artificiais</li>
+                        <li>Produção artesanal</li>
+                        <li>Longa durabilidade</li>
+                        <li>Pronta para consumo</li>
+                        <li>Balde de 3,6kg</li>
+                    </ul>
+                    <div class="produto-quantity">
+                        <label for="quantity">Quantidade:</label>
+                        <div class="quantity-input">
+                            <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                            <input type="text" id="quantity" class="quantity-value" value="1" readonly>
+                            <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                        </div>
+                    </div>
+                    <button class="btn" onclick="addToCart()">Comprar Agora</button>
+                    <div class="produto-frete">
+                        <h3><i class="fas fa-truck"></i> FRETE GRÁTIS</h3>
+                        <p>Entrega em até 10 dias úteis para todo Brasil</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produto-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" onclick="openTab('descricao')">Descrição</button>
+                    <button class="tab-btn" onclick="openTab('nutricional')">Informações Nutricionais</button>
+                    <button class="tab-btn" onclick="openTab('preparo')">Modo de Preparo</button>
+                    <button class="tab-btn" onclick="openTab('avaliacoes')">Avaliações</button>
+                </div>
+
+                <div id="descricao" class="tab-content active">
+                    <h3>Descrição do Produto</h3>
+                    <p>A carne na lata é uma tradição que surgiu no Brasil Colonial, na época da Mineração em Minas Gerais, da necessidade de se conservar carne por longos períodos em uma época sem refrigeração.</p>
+                    <p>Nosso produto é preparado seguindo a receita tradicional mineira, onde a carne suína é cozida lentamente na própria gordura, criando um método de conservação natural que preserva o sabor e a qualidade da carne.</p>
+                    <p>O resultado é uma carne macia, saborosa e versátil, que pode ser utilizada em diversos pratos, desde o tradicional feijão tropeiro até sanduíches gourmet.</p>
+                    <p>Cada balde contém 3,6kg de carne na lata, conservada na própria gordura, sem adição de conservantes artificiais, garantindo um produto autêntico e de alta qualidade.</p>
+                    <h4>Características:</h4>
+                    <ul>
+                        <li>Peso: 3,6kg</li>
+                        <li>Validade: 6 meses (fechado)</li>
+                        <li>Conservação: Após aberto, manter refrigerado e consumir em até 15 dias</li>
+                        <li>Ingredientes: Carne suína, banha suína, sal e temperos naturais</li>
+                    </ul>
+                </div>
+
+                <div id="nutricional" class="tab-content">
+                    <h3>Informações Nutricionais</h3>
+                    <p>Porção de 100g (1 colher de sopa)</p>
+                    <table class="nutricional-table">
+                        <tr>
+                            <td>Valor Energético</td>
+                            <td>320 kcal</td>
+                        </tr>
+                        <tr>
+                            <td>Carboidratos</td>
+                            <td>0g</td>
+                        </tr>
+                        <tr>
+                            <td>Proteínas</td>
+                            <td>25g</td>
+                        </tr>
+                        <tr>
+                            <td>Gorduras Totais</td>
+                            <td>24g</td>
+                        </tr>
+                        <tr>
+                            <td>Gorduras Saturadas</td>
+                            <td>9g</td>
+                        </tr>
+                        <tr>
+                            <td>Gorduras Trans</td>
+                            <td>0g</td>
+                        </tr>
+                        <tr>
+                            <td>Fibra Alimentar</td>
+                            <td>0g</td>
+                        </tr>
+                        <tr>
+                            <td>Sódio</td>
+                            <td>450mg</td>
+                        </tr>
+                    </table>
+                    <p><small>* Valores diários de referência com base em uma dieta de 2.000 kcal.</small></p>
+                    <p><strong>Alérgicos:</strong> Não contém glúten. Não contém lactose.</p>
+                </div>
+
+                <div id="preparo" class="tab-content">
+                    <h3>Modo de Preparo</h3>
+                    <p>A carne na lata já vem pronta para consumo, mas aqui estão algumas sugestões de preparo:</p>
+                    <h4>Consumo Direto:</h4>
+                    <ol>
+                        <li>Abra o balde com cuidado.</li>
+                        <li>Retire a quantidade desejada de carne.</li>
+                        <li>Aqueça em fogo baixo ou no micro-ondas.</li>
+                        <li>Sirva como acompanhamento ou em sanduíches.</li>
+                    </ol>
+                    <h4>Feijão Tropeiro:</h4>
+                    <ol>
+                        <li>Em uma panela, aqueça um pouco da carne na lata com sua gordura.</li>
+                        <li>Adicione feijão cozido, farinha de mandioca, couve picada e ovos.</li>
+                        <li>Misture bem e sirva quente.</li>
+                    </ol>
+                    <h4>Conservação:</h4>
+                    <p>Após aberto, mantenha o produto refrigerado e sempre coberto com a gordura para maior conservação. Consumir em até 15 dias após aberto.</p>
+                </div>
+
+                <div id="avaliacoes" class="tab-content">
+                    <h3>Avaliações dos Clientes</h3>
+                    <div class="avaliacao-media">
+                        <p>Avaliação média: <span class="stars">★★★★★</span> (5.0)</p>
+                    </div>
+                    <div class="avaliacao-item">
+                        <div class="avaliacao-header">
+                            <span class="stars">★★★★★</span>
+                            <span class="avaliacao-author">Maria Oliveira</span>
+                            <span class="avaliacao-date">10/05/2025</span>
+                        </div>
+                        <div class="avaliacao-content">
+                            <p>Produto incrível! A carne na lata da Venda do Zé me fez lembrar da comida da minha avó. Sabor autêntico e qualidade excepcional. Recomendo a todos!</p>
+                        </div>
+                    </div>
+                    <div class="avaliacao-item">
+                        <div class="avaliacao-header">
+                            <span class="stars">★★★★★</span>
+                            <span class="avaliacao-author">João Silva</span>
+                            <span class="avaliacao-date">02/04/2025</span>
+                        </div>
+                        <div class="avaliacao-content">
+                            <p>Produto incrível! Prático, saboroso e com aquele gostinho de comida caseira que só encontramos em Minas. Já virou tradição na minha casa.</p>
+                        </div>
+                    </div>
+                    <div class="avaliacao-item">
+                        <div class="avaliacao-header">
+                            <span class="stars">★★★★★</span>
+                            <span class="avaliacao-author">Ana Santos</span>
+                            <span class="avaliacao-date">15/03/2025</span>
+                        </div>
+                        <div class="avaliacao-content">
+                            <p>A melhor carne na lata que já experimentei. O sabor é incomparável e a praticidade de ter um produto de qualidade sempre à mão é incrível.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sugestões Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Sugestões de Uso</h2>
+            <div class="diferenciais-grid">
+                <div class="diferencial-item">
+                    <img src="images/carne_lata_3.jpg" alt="Feijão Tropeiro" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                    <h3>Feijão Tropeiro</h3>
+                    <p>Combine nossa carne na lata com feijão, farinha e couve para um autêntico feijão tropeiro mineiro.</p>
+                </div>
+                <div class="diferencial-item">
+                    <img src="images/carne_lata_4.jpg" alt="Sanduíches" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                    <h3>Sanduíches</h3>
+                    <p>Crie sanduíches gourmet com nossa carne na lata, queijo e molhos especiais.</p>
+                </div>
+                <div class="diferencial-item">
+                    <img src="images/carne_lata_5.jpg" alt="Acompanhamento" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                    <h3>Acompanhamento</h3>
+                    <p>Sirva como acompanhamento para arroz, tutu de feijão e outros pratos tradicionais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frete Section -->
+    <section class="frete">
+        <div class="container">
+            <h2>FRETE GRÁTIS PARA TODO BRASIL</h2>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <img src="images/logo.png" alt="Venda do Zé - Empório Mineiro" class="footer-logo">
+                    <p>Tradição mineira em cada pedaço. Carne na lata produzida artesanalmente com sabor autêntico.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/vendadozerc" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produto.html">Produto</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="receitas.html">Receitas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Informações</h3>
+                    <ul>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Entrega</a></li>
+                        <li><a href="#">Política de Troca</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (XX) XXXX-XXXX</li>
+                        <li><i class="fas fa-envelope"></i> contato@vendadoze.com.br</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Minas Gerais, Brasil</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Venda do Zé - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function changeImage(src) {
+            document.getElementById('main-image').src = src;
+        }
+
+        function openTab(tabName) {
+            // Hide all tab contents
+            var tabContents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+
+            // Remove active class from all tab buttons
+            var tabButtons = document.getElementsByClassName('tab-btn');
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+
+            // Show the selected tab content and mark the button as active
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        function increaseQuantity() {
+            var quantityInput = document.getElementById('quantity');
+            var currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+        }
+
+        function decreaseQuantity() {
+            var quantityInput = document.getElementById('quantity');
+            var currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        }
+
+        function addToCart() {
+            var quantity = document.getElementById('quantity').value;
+            alert('Produto adicionado ao carrinho: ' + quantity + ' unidade(s) de Carne na Lata - 3,6kg');
+            // Aqui você adicionaria a lógica para atualizar o carrinho
+            document.querySelector('.cart-count').textContent = quantity;
+        }
+    </script>
+</body>
+</html>
+
